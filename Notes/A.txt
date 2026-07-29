@@ -1,1 +1,2 @@
 Arrays can store only same data types;
+Hello my name is omkar
