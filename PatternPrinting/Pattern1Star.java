@@ -2,15 +2,38 @@ package PatternPrinting;
 
 public class Pattern1Star {
     public static void main(String args[]){
-        pattern32(4);
+        pattern33(4);
 
     }
 
-    static void pattern32(int n){
-        char letter = (char) (n+1);
+     static void pattern33(int n){
+        
+        char smallLetter = (char) ('a');
+
         for(int i = 0; i <= n; i++){
+            
+            
             for(int j = 0; j <= i; j++){
-                System.out.print(letter);
+              if((int) smallLetter % 2 == 0){
+              System.out.print(Character.toUpperCase(smallLetter) + " ");
+            }else{
+              System.out.print(Character.toLowerCase(smallLetter) + " ");
+            }
+            smallLetter++;
+        }
+            
+            System.out.println();
+        }
+    }
+
+    static void pattern32(int n){
+        
+        for(int i = 0; i <= n; i++){
+            
+              char letter = (char) ('A'+ (n - i) );
+            for(int j = 0; j <= i; j++){
+                System.out.print(letter + " ");
+                letter++;
             }
             System.out.println();
         }
