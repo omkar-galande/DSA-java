@@ -2,8 +2,37 @@ package PatternPrinting;
 
 public class Pattern1Star {
     public static void main(String args[]){
-        pattern33(4);
+        pattern35(4);
 
+    }
+
+    static void pattern35(int n){
+
+        for(int i = 1; i <= n; i++){
+            for(int j = 1; j <= i; j++){
+                System.out.print(j+" ");
+            }
+
+            for(int j = 1; j <= 2 * (n - i); j++){
+                System.out.print("  ");
+            }
+
+            for(int j = i; j >= 1; j--){
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+    }
+
+    static void pattern34(int n){
+        for(int i = n; i >= 0; i--){
+            
+            for(int j = n ; j >= n - i; j--){
+                char c = (char) ('A' + j);
+                System.out.print(c + " ");
+            }
+            System.out.println();
+        }
     }
 
      static void pattern33(int n){
