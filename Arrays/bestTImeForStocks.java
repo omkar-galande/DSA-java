@@ -1,17 +1,15 @@
 public class bestTImeForStocks {
     // Returns max profit for one transaction
     public static int maxProfit(int[] prices) {
-        if (prices == null || prices.length < 2) return 0;
-        int min = prices[0];
-        int maxProfit = 0;
-        for (int i = 1; i < prices.length; i++) {
-            if (prices[i] < min) min = prices[i];
-            else {
-                int profit = prices[i] - min;
-                if (profit > maxProfit) maxProfit = profit;
-            }
+        int price = prices[0];
+        int max = 0;
+
+        for(int i = 0; i < prices.length; i++){
+            price = Math.min(prices[i], price);
+            int price1 = prices[i] - price;
+            max = Math.max(price1, max);
         }
-        return maxProfit;
+        return max;
     }
 
     // simple test
